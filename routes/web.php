@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardComponentsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -27,8 +28,20 @@ Route::middleware('auth')->group(function () {
 Route::get('admin/dashboard',function(){
     return Inertia::render('Master');
 });
-Route::get('admin/testing',function(){
+
+
+//components routes
+Route::get('admin/dashboard',function(){
     return Inertia::render('SampleBody');
 });
+Route::prefix('admin/dashboard/')->controller(DashboardComponentsController::class)->group(function(){
+
+    Route::get('buttons','buttons')->name('buttons.ui');
+    Route::get('dropdowns','dropdowns')->name('dropdowns.ui');
+    Route::get('typography','typography')->name('typography.ui');
+});
+
+//end component routes
+
 
 require __DIR__.'/auth.php';

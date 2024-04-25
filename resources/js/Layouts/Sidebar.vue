@@ -80,12 +80,12 @@
                     </a>
                     <div :class="{ 'collapse': !subMenuOpen['ui-basic'] }" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                            <li class="nav-item"> <Link class="nav-link" :href="route('buttons.ui')">Buttons</Link>
                             </li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/typography.html">Typography</a></li>
+                            <li class="nav-item"> <Link class="nav-link"
+                                    :href="route('dropdowns.ui')">Dropdowns</Link></li>
+                            <li class="nav-item"> <Link class="nav-link"
+                                    :href="route('typography.ui')">Typography</Link></li>
                         </ul>
                     </div>
                 </li>
@@ -155,6 +155,7 @@
 </template>
 <script setup>
 import { ref } from 'vue';
+import { Link } from '@inertiajs/vue3'
 
 const subMenuOpen = ref({
   'ui-basic': false,
