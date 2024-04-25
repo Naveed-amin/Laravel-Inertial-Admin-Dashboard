@@ -16,8 +16,7 @@ This project is a simple admin dashboard built with Laravel, Inertia.js, and Vue
 Clone the repo locally:
 
 ```sh
-git clone git@github.com:Naveed-amin/Laravel-Inertial-Admin-Dashboard.git admin-dashboard
-cd admin-dashboard
+git clone git@github.com:Naveed-amin/Laravel-Inertial-Admin-Dashboard.git 
 ```
 
 Install PHP dependencies:
